@@ -584,12 +584,14 @@ input[type="range"]::-moz-range-track {
 
 .product-title {
   font: 500 18px Inter, sans-serif;
+  margin-bottom: -20px;
   color: #fff;
 }
 
-.product-price {
+.product-card .product-price {
   color: rgba(255, 255, 255, 0.7);
   font: 300 16px Inter, sans-serif;
+  margin-bottom: 0;
 }
 
 .wishlist-btn {

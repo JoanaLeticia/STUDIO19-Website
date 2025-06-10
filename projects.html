@@ -1,77 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos | STUDIO19 - Graphic Design</title>
-    <link rel="stylesheet" href="style-projects.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-          const buttons = document.querySelectorAll(".filter-btn");
-          const cards = document.querySelectorAll(".project-card-horizontal");
-          const noProjectsMsg = document.querySelector(".no-projects-msg");
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos | STUDIO19 - Graphic Design</title>
+  <link rel="stylesheet" href="style-projects.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-          function filtrarPorCategoria(categoria) {
-            let visibleCount = 0;
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll(".filter-btn");
+      const cards = document.querySelectorAll(".project-card-horizontal");
+      const noProjectsMsg = document.querySelector(".no-projects-msg");
 
-            cards.forEach(card => {
-              if (categoria === "todos" || card.dataset.category === categoria) {
-                card.style.display = "flex";
-                visibleCount++;
-              } else {
-                card.style.display = "none";
-              }
-            });
+      function filtrarPorCategoria(categoria) {
+        let visibleCount = 0;
 
-            if (visibleCount === 0) {
-              noProjectsMsg.classList.remove("hidden");
-            } else {
-              noProjectsMsg.classList.add("hidden");
-            }
-          }
-
-          buttons.forEach(btn => {
-            btn.addEventListener("click", () => {
-              buttons.forEach(b => b.classList.remove("active"));
-              btn.classList.add("active");
-
-              const category = btn.dataset.category;
-              filtrarPorCategoria(category);
-            });
-          });
-
-          const urlParams = new URLSearchParams(window.location.search);
-          const categoriaSelecionada = urlParams.get("categoria");
-
-          if (categoriaSelecionada) {
-            const buttonToActivate = document.querySelector(`.filter-btn[data-category="${categoriaSelecionada}"]`);
-            if (buttonToActivate) {
-              buttonToActivate.click();
-              window.scrollTo({ top: 0 });
-            } else {
-              cards.forEach(card => card.style.display = "none");
-              noProjectsMsg.classList.remove("hidden");
-            }
+        cards.forEach(card => {
+          if (categoria === "todos" || card.dataset.category === categoria) {
+            card.style.display = "flex";
+            visibleCount++;
           } else {
-            filtrarPorCategoria("todos");
-            const allButton = document.querySelector('.filter-btn[data-category="todos"]');
-            if (allButton) allButton.classList.add("active");
+            card.style.display = "none";
           }
         });
-    </script>
+
+        if (visibleCount === 0) {
+          noProjectsMsg.classList.remove("hidden");
+        } else {
+          noProjectsMsg.classList.add("hidden");
+        }
+      }
+
+      buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          buttons.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const category = btn.dataset.category;
+          filtrarPorCategoria(category);
+        });
+      });
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const categoriaSelecionada = urlParams.get("categoria");
+
+      if (categoriaSelecionada) {
+        const buttonToActivate = document.querySelector(`.filter-btn[data-category="${categoriaSelecionada}"]`);
+        if (buttonToActivate) {
+          buttonToActivate.click();
+          window.scrollTo({ top: 0 });
+        } else {
+          cards.forEach(card => card.style.display = "none");
+          noProjectsMsg.classList.remove("hidden");
+        }
+      } else {
+        filtrarPorCategoria("todos");
+        const allButton = document.querySelector('.filter-btn[data-category="todos"]');
+        if (allButton) allButton.classList.add("active");
+      }
+    });
+  </script>
 
 </head>
+
 <body>
-    <header class="header">
+  <header class="header">
       <nav class="nav-container">
         <a href="index.html">
           <img src="navbar-studio19-logo.png" alt="Studio19 Logo" class="logo">
         </a>
 
         <div class="nav-links">
-          <a href="index.html" class="nav-link">Sobre</a>
+          <a href="#about-me" class="nav-link">Sobre</a>
 
           <div class="dropdown">
             <a href="projects.html" class="nav-link">Projetos ▾</a>
@@ -123,100 +125,106 @@
 
         <div class="nav-icons">
           <a href="#" class="icon"><i class="fas fa-search"></i></a>
-          <a href="#" class="icon"><i class="fas fa-user"></i></a>
-          <a href="#" class="icon"><i class="fas fa-shopping-bag"></i></a>
+          <a href="area-minhaconta.html" class="icon"><i class="fas fa-user"></i></a>
+          <a href="carrinho.html" class="icon"><i class="fas fa-shopping-bag"></i></a>
         </div>
       </nav>
     </header>
-    <div class="page">
-        <div class="general-title-section">
-            <a href="index.html" class="subtitle">HOME ></a>
-            <p class="title">Projetos</p>
-        </div>
-
-        <section class="filter-section">
-          <div class="filter-buttons">
-            <button class="filter-btn active" data-category="todos">TODOS</button>
-            <button class="filter-btn" data-category="branding">IDENTIDADES VISUAIS</button>
-            <button class="filter-btn" data-category="streaming">PACOTE STREAMER</button>
-            <button class="filter-btn" data-category="desenhos">DESENHOS</button>
-            <button class="filter-btn" data-category="fivem">TEXTURAS PARA FIVEM</button>
-            <button class="filter-btn" data-category="modelagem">MODELAGEM 3D</button>
-          </div>
-        </section>
-
-        <section class="project-list">
-          <div class="project-card-horizontal" data-category="streaming">
-            <div class="project-image" style="--img:url('thumb-puma.jpg');"></div>
-            <div class="project-info">
-              <p class="project-date">Jul. 2024</p>
-              <h3 class="project-title">Pacote Streamer - Puuma</h3>
-              <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maece nasa tincidunt est, ut tincidunt nunc. Sed vitae fringilla massa. Dolor sit amet, consectetur adipiscing elit...</p>
-              <a href="#" class="project-button">Confira <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="project-card-horizontal" data-category="streaming">
-            <div class="project-image" style="--img:url('thumb-saminhoz.jpg');"></div>
-            <div class="project-info">
-              <p class="project-date">Ago. 2024</p>
-              <h3 class="project-title">Pacote Streamer - Saminhoz</h3>
-              <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maece nasa tincidunt est, ut tincidunt nunc. Sed vitae fringilla massa. Dolor sit amet, consectetur adipiscing elit...</p>
-              <a href="#" class="project-button">Confira <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="project-card-horizontal" data-category="branding">
-            <div class="project-image" style="--img:url('thumb-thug.jpg');"></div>
-            <div class="project-info">
-              <p class="project-date">Jan. 2024</p>
-              <h3 class="project-title">Pacote Streamer - Thug</h3>
-              <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maece nasa tincidunt est, ut tincidunt nunc. Sed vitae fringilla massa. Dolor sit amet, consectetur adipiscing elit...</p>
-              <a href="project-thug.html" class="project-button">Confira <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </section>
-        <div class="no-projects-msg hidden">
-          <i class="fa-solid fa-heart-crack"></i>
-          <p class="main-text">Nenhum projeto encontrado para essa categoria.</p>
-          <p class="sub-text">Em breve estaremos atualizando com novos projetos!</p>
-        </div>
-
-        <footer class="main-footer">
-          <div class="footer-container">
-            <!-- Conteúdo principal do footer -->
-            <div class="footer-content">
-              <!-- Lado esquerdo -->
-              <div class="footer-left">
-                <img src="navbar-studio19-logo.png" alt="Logo Studio19" class="footer-logo" />
-                <p class="footer-phrase">Do branding ao design digital, transformamos ideias em soluções criativas que fortalecem sua marca.</p>
-                <div class="footer-socials">
-                  <a href="#" class="social-icon"><img src="Instagram.png" alt="Instagram"></a>
-                  <a href="#" class="social-icon"><img src="TwitterX.png" alt="Twitter"></a>
-                  <a href="#" class="social-icon"><img src="behance-icon.png" alt="Behance"></a>
-                  <a href="#" class="social-icon"><img src="Discord New.png" alt="Discord"></a>
-                </div>
-              </div>
-              <!-- Lado direito -->
-              <div class="footer-right">
-                <h3 class="footer-menu-title">Menu</h3>
-                <ul class="footer-menu">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Sobre</a></li>
-                  <li><a href="#">Projetos</a></li>
-                  <li><a href="#">Produtos</a></li>
-                  <li><a href="#">Pacotes</a></li>
-                  <li><a href="#">Serviços</a></li>
-                </ul>
-              </div>
-            </div>
-            <!-- Footer inferior -->
-            <div class="footer-bottom">
-              <p>Joana Letícia - CEO / Designer Gráfica</p>
-              <p>Copyright © 2025 STUDIO19.</p>
-            </div>
-          </div>
-        </footer>
+    
+  <div class="page">
+    <div class="general-title-section">
+      <a href="index.html" class="subtitle">HOME ></a>
+      <p class="title">Projetos</p>
     </div>
+
+    <section class="filter-section">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-category="todos">TODOS</button>
+        <button class="filter-btn" data-category="branding">IDENTIDADES VISUAIS</button>
+        <button class="filter-btn" data-category="streaming">PACOTE STREAMER</button>
+        <button class="filter-btn" data-category="desenhos">DESENHOS</button>
+        <button class="filter-btn" data-category="fivem">TEXTURAS PARA FIVEM</button>
+        <button class="filter-btn" data-category="modelagem">MODELAGEM 3D</button>
+      </div>
+    </section>
+
+    <section class="project-list">
+      <div class="project-card-horizontal" data-category="streaming">
+        <div class="project-image" style="--img:url('thumb-puma.jpg');"></div>
+        <div class="project-info">
+          <p class="project-date">Jul. 2024</p>
+          <h3 class="project-title">Pacote Streamer - Puuma</h3>
+          <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maece nasa tincidunt
+            est, ut tincidunt nunc. Sed vitae fringilla massa. Dolor sit amet, consectetur adipiscing elit...</p>
+          <a href="#" class="project-button">Confira <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="project-card-horizontal" data-category="streaming">
+        <div class="project-image" style="--img:url('thumb-saminhoz.jpg');"></div>
+        <div class="project-info">
+          <p class="project-date">Ago. 2024</p>
+          <h3 class="project-title">Pacote Streamer - Saminhoz</h3>
+          <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maece nasa tincidunt
+            est, ut tincidunt nunc. Sed vitae fringilla massa. Dolor sit amet, consectetur adipiscing elit...</p>
+          <a href="#" class="project-button">Confira <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="project-card-horizontal" data-category="branding">
+        <div class="project-image" style="--img:url('thumb-thug.jpg');"></div>
+        <div class="project-info">
+          <p class="project-date">Jan. 2024</p>
+          <h3 class="project-title">Pacote Streamer - Thug</h3>
+          <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maece nasa tincidunt
+            est, ut tincidunt nunc. Sed vitae fringilla massa. Dolor sit amet, consectetur adipiscing elit...</p>
+          <a href="project-thug.html" class="project-button">Confira <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+    <div class="no-projects-msg hidden">
+      <i class="fa-solid fa-heart-crack"></i>
+      <p class="main-text">Nenhum projeto encontrado para essa categoria.</p>
+      <p class="sub-text">Em breve estaremos atualizando com novos projetos!</p>
+    </div>
+
+    <footer class="main-footer">
+      <div class="footer-container">
+        <!-- Conteúdo principal do footer -->
+        <div class="footer-content">
+          <!-- Lado esquerdo -->
+          <div class="footer-left">
+            <img src="navbar-studio19-logo.png" alt="Logo Studio19" class="footer-logo" />
+            <p class="footer-phrase">Do branding ao design digital, transformamos ideias em soluções criativas que
+              fortalecem sua marca.</p>
+            <div class="footer-socials">
+              <a href="#" class="social-icon"><img src="Instagram.png" alt="Instagram"></a>
+              <a href="#" class="social-icon"><img src="TwitterX.png" alt="Twitter"></a>
+              <a href="#" class="social-icon"><img src="behance-icon.png" alt="Behance"></a>
+              <a href="#" class="social-icon"><img src="Discord New.png" alt="Discord"></a>
+            </div>
+          </div>
+          <!-- Lado direito -->
+          <div class="footer-right">
+            <h3 class="footer-menu-title">Menu</h3>
+            <ul class="footer-menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Sobre</a></li>
+              <li><a href="#">Projetos</a></li>
+              <li><a href="#">Produtos</a></li>
+              <li><a href="#">Pacotes</a></li>
+              <li><a href="#">Serviços</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Footer inferior -->
+        <div class="footer-bottom">
+          <p>Joana Letícia - CEO / Designer Gráfica</p>
+          <p>Copyright © 2025 STUDIO19.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
 </body>
+
 </html>

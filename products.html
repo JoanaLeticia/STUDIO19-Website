@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos | STUDIO19 - Graphic Design</title>
-    <link rel="stylesheet" href="style-projects.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
-    <script src="script-products.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos | STUDIO19 - Graphic Design</title>
+  <link rel="stylesheet" href="style-projects.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script src="script-products.js" defer></script>
 </head>
+
 <body>
-    <header class="header">
+  <header class="header">
       <nav class="nav-container">
         <a href="index.html">
           <img src="navbar-studio19-logo.png" alt="Studio19 Logo" class="logo">
         </a>
 
         <div class="nav-links">
-          <a href="index.html" class="nav-link">Sobre</a>
+          <a href="#about-me" class="nav-link">Sobre</a>
 
           <div class="dropdown">
             <a href="projects.html" class="nav-link">Projetos ▾</a>
@@ -69,200 +71,205 @@
 
         <div class="nav-icons">
           <a href="#" class="icon"><i class="fas fa-search"></i></a>
-          <a href="#" class="icon"><i class="fas fa-user"></i></a>
-          <a href="#" class="icon"><i class="fas fa-shopping-bag"></i></a>
+          <a href="area-minhaconta.html" class="icon"><i class="fas fa-user"></i></a>
+          <a href="carrinho.html" class="icon"><i class="fas fa-shopping-bag"></i></a>
         </div>
       </nav>
     </header>
-    <div class="page">
-        <div class="general-title-section">
-            <a href="index.html" class="subtitle">HOME ></a>
-            <p class="title">Produtos</p>
-        </div>
-
-        <section class="filter-section">
-          <div class="filter-buttons">
-            <button class="filter-btn active" data-category="todos">TODOS</button>
-            <button class="filter-btn" data-category="modelagem">MODELAGEM 3D</button>
-            <button class="filter-btn" data-category="streaming">STREAMING</button>
-            <button class="filter-btn" data-category="fivem">FIVEM</button>
-          </div>
-        </section>
-
-        <section class="product-controls-section">
-            <div class="controls">
-                <button class="filter-btn-grid">
-                    <i class="fa-solid fa-filter"></i> Filtro
-                </button>
-                <div class="filter-dropdown hidden">
-                    <div class="filter-produto">
-                        <p class="filter-title">Filtrar por</p>
-
-                        <!-- Filtro de preço -->
-                        <div class="filter-group">
-                            <label for="price-range" style="font-weight: 600; font-size: 16px; color:#fff;">Preço até:</label>
-                            <input type="range" id="price-range" min="0" max="1000" value="500" />
-                            <span id="price-value">R$ 500</span>
-                        </div>
-
-                        <div class="horizontal-divider"></div>
-
-                        <!-- Filtro de disponibilidade -->
-                        <div class="filter-group">
-                            <label style="font-weight: 600; font-size: 16px; color: #fff">Disponibilidade:</label>
-                            <div class="checkbox-container">
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" id="disponivel" />
-                                    <span class="checkmark"></span>
-                                    Disponíveis
-                                </label>
-
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" id="indisponivel" />
-                                    <span class="checkmark"></span>
-                                    Indisponíveis
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <span class="product-count">0 produtos</span>
-
-                <div class="sort-dropdown">
-                    <button class="sort-toggle">
-                    Ordenação <i class="fa-solid fa-angle-down"></i>
-                    </button>
-                    <ul class="sort-menu hidden">
-                        <li data-sort="alfabetica-crescente">Ordem alfabética, A-Z</li>
-                        <li data-sort="alfabetica-decrescente">Ordem alfabética, Z-A</li>
-                        <li data-sort="lowest">Preço, ordem crescente</li>
-                        <li data-sort="highest">Preço, ordem decrescente</li>
-                        <li data-sort="data-recentes">Data, mais recentes</li>
-                        <li data-sort="data-antigos">Data, mais antigos</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="product-grid-section">
-            <div class="product-grid">
-                <!-- Repetir este bloco até 9 vezes -->
-                <div class="product-card" data-category="fivem">
-                    <a href="product-teste.html" style="text-decoration: none;"><div class="product-img" style="--img:url('image-produto1-1.png');"></div></a>
-                    <div class="product-info">
-                        <a href="product-teste.html" style="text-decoration: none;"><h3 class="product-title">Nome do Produto 01</h3></a>
-                        <p class="product-price">R$00,00</p>
-                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-                    </div>
-                </div>
-                <div class="product-card" data-category="fivem">
-                    <div class="product-img" style="--img:url('image-produto2-1.png');"></div>
-                    <div class="product-info">
-                        <h3 class="product-title">Nome do Produto 01</h3>
-                        <p class="product-price">R$00,00</p>
-                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-                    </div>
-                </div>
-                <div class="product-card" data-category="streaming">
-                    <div class="product-img" style="--img:url('image-produto4-1.png');"></div>
-                    <div class="product-info">
-                        <h3 class="product-title">Nome do Produto 01</h3>
-                        <p class="product-price">R$00,00</p>
-                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-                    </div>
-                </div>
-                <div class="product-card" data-category="fivem">
-                    <div class="product-img" style="--img:url('image-produto5-1.png');"></div>
-                    <div class="product-info">
-                        <h3 class="product-title">Nome do Produto 01</h3>
-                        <p class="product-price">R$00,00</p>
-                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-                    </div>
-                </div>
-                <div class="product-card" data-category="fivem">
-                    <div class="product-img" style="--img:url('image-produto6-1.png');"></div>
-                    <div class="product-info">
-                        <h3 class="product-title">Nome do Produto 01</h3>
-                        <p class="product-price">R$00,00</p>
-                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-                    </div>
-                </div>
-                <div class="product-card" data-category="streaming">
-                    <div class="product-img" style="--img:url('image-produto10-1.png');"></div>
-                    <div class="product-info">
-                        <h3 class="product-title">Nome do Produto 01</h3>
-                        <p class="product-price">R$00,00</p>
-                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-                    </div>
-                </div>
-                <div class="product-card" data-category="fivem">
-                    <div class="product-img" style="--img:url('image-produto11-1.png');"></div>
-                    <div class="product-info">
-                        <h3 class="product-title">Nome do Produto 01</h3>
-                        <p class="product-price">R$00,00</p>
-                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-                    </div>
-                </div>
-                <div class="product-card" data-category="fivem">
-                    <div class="product-img" style="--img:url('image-produto12-1.png');"></div>
-                    <div class="product-info">
-                        <h3 class="product-title">Nome do Produto 01</h3>
-                        <p class="product-price">R$00,00</p>
-                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-                    </div>
-                </div>
-                <div class="product-card" data-category="streaming">
-                    <div class="product-img" style="--img:url('image-produto4-1.png');"></div>
-                    <div class="product-info">
-                        <h3 class="product-title">Nome do Produto 01</h3>
-                        <p class="product-price">R$00,00</p>
-                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="no-projects-msg hidden">
-          <i class="fa-solid fa-heart-crack"></i>
-          <p class="main-text">Nenhum produto encontrado para essa categoria.</p>
-          <p class="sub-text">Em breve estaremos atualizando com novos produtos!</p>
-        </div>
-
-        <footer class="main-footer">
-          <div class="footer-container">
-            <!-- Conteúdo principal do footer -->
-            <div class="footer-content">
-              <!-- Lado esquerdo -->
-              <div class="footer-left">
-                <img src="navbar-studio19-logo.png" alt="Logo Studio19" class="footer-logo" />
-                <p class="footer-phrase">Do branding ao design digital, transformamos ideias em soluções criativas que fortalecem sua marca.</p>
-                <div class="footer-socials">
-                  <a href="#" class="social-icon"><img src="Instagram.png" alt="Instagram"></a>
-                  <a href="#" class="social-icon"><img src="TwitterX.png" alt="Twitter"></a>
-                  <a href="#" class="social-icon"><img src="behance-icon.png" alt="Behance"></a>
-                  <a href="#" class="social-icon"><img src="Discord New.png" alt="Discord"></a>
-                </div>
-              </div>
-              <!-- Lado direito -->
-              <div class="footer-right">
-                <h3 class="footer-menu-title">Menu</h3>
-                <ul class="footer-menu">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Sobre</a></li>
-                  <li><a href="#">Projetos</a></li>
-                  <li><a href="#">Produtos</a></li>
-                  <li><a href="#">Pacotes</a></li>
-                  <li><a href="#">Serviços</a></li>
-                </ul>
-              </div>
-            </div>
-            <!-- Footer inferior -->
-            <div class="footer-bottom">
-              <p>Joana Letícia - CEO / Designer Gráfica</p>
-              <p>Copyright © 2025 STUDIO19.</p>
-            </div>
-          </div>
-        </footer>
+  <div class="page">
+    <div class="general-title-section">
+      <a href="index.html" class="subtitle">HOME ></a>
+      <p class="title">Produtos</p>
     </div>
+
+    <section class="filter-section">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-category="todos">TODOS</button>
+        <button class="filter-btn" data-category="modelagem">MODELAGEM 3D</button>
+        <button class="filter-btn" data-category="streaming">STREAMING</button>
+        <button class="filter-btn" data-category="fivem">FIVEM</button>
+      </div>
+    </section>
+
+    <section class="product-controls-section">
+      <div class="controls">
+        <button class="filter-btn-grid">
+          <i class="fa-solid fa-filter"></i> Filtro
+        </button>
+        <div class="filter-dropdown hidden">
+          <div class="filter-produto">
+            <p class="filter-title">Filtrar por</p>
+
+            <!-- Filtro de preço -->
+            <div class="filter-group">
+              <label for="price-range" style="font-weight: 600; font-size: 16px; color:#fff;">Preço até:</label>
+              <input type="range" id="price-range" min="0" max="1000" value="500" />
+              <span id="price-value">R$ 500</span>
+            </div>
+
+            <div class="horizontal-divider"></div>
+
+            <!-- Filtro de disponibilidade -->
+            <div class="filter-group">
+              <label style="font-weight: 600; font-size: 16px; color: #fff">Disponibilidade:</label>
+              <div class="checkbox-container">
+                <label class="custom-checkbox">
+                  <input type="checkbox" id="disponivel" />
+                  <span class="checkmark"></span>
+                  Disponíveis
+                </label>
+
+                <label class="custom-checkbox">
+                  <input type="checkbox" id="indisponivel" />
+                  <span class="checkmark"></span>
+                  Indisponíveis
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <span class="product-count">0 produtos</span>
+
+        <div class="sort-dropdown">
+          <button class="sort-toggle">
+            Ordenação <i class="fa-solid fa-angle-down"></i>
+          </button>
+          <ul class="sort-menu hidden">
+            <li data-sort="alfabetica-crescente">Ordem alfabética, A-Z</li>
+            <li data-sort="alfabetica-decrescente">Ordem alfabética, Z-A</li>
+            <li data-sort="lowest">Preço, ordem crescente</li>
+            <li data-sort="highest">Preço, ordem decrescente</li>
+            <li data-sort="data-recentes">Data, mais recentes</li>
+            <li data-sort="data-antigos">Data, mais antigos</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-grid-section">
+      <div class="product-grid">
+        <!-- Repetir este bloco até 9 vezes -->
+        <div class="product-card" data-category="fivem">
+          <a href="product-teste.html" style="text-decoration: none;">
+            <div class="product-img" style="--img:url('image-produto1-1.png');"></div>
+          </a>
+          <div class="product-info">
+            <a href="product-teste.html" style="text-decoration: none;">
+              <h3 class="product-title">Nome do Produto 01</h3>
+            </a>
+            <p class="product-price">R$00,00</p>
+            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          </div>
+        </div>
+        <div class="product-card" data-category="fivem">
+          <div class="product-img" style="--img:url('image-produto2-1.png');"></div>
+          <div class="product-info">
+            <h3 class="product-title">Nome do Produto 01</h3>
+            <p class="product-price">R$00,00</p>
+            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          </div>
+        </div>
+        <div class="product-card" data-category="streaming">
+          <div class="product-img" style="--img:url('image-produto4-1.png');"></div>
+          <div class="product-info">
+            <h3 class="product-title">Nome do Produto 01</h3>
+            <p class="product-price">R$00,00</p>
+            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          </div>
+        </div>
+        <div class="product-card" data-category="fivem">
+          <div class="product-img" style="--img:url('image-produto5-1.png');"></div>
+          <div class="product-info">
+            <h3 class="product-title">Nome do Produto 01</h3>
+            <p class="product-price">R$00,00</p>
+            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          </div>
+        </div>
+        <div class="product-card" data-category="fivem">
+          <div class="product-img" style="--img:url('image-produto6-1.png');"></div>
+          <div class="product-info">
+            <h3 class="product-title">Nome do Produto 01</h3>
+            <p class="product-price">R$00,00</p>
+            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          </div>
+        </div>
+        <div class="product-card" data-category="streaming">
+          <div class="product-img" style="--img:url('image-produto10-1.png');"></div>
+          <div class="product-info">
+            <h3 class="product-title">Nome do Produto 01</h3>
+            <p class="product-price">R$00,00</p>
+            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          </div>
+        </div>
+        <div class="product-card" data-category="fivem">
+          <div class="product-img" style="--img:url('image-produto11-1.png');"></div>
+          <div class="product-info">
+            <h3 class="product-title">Nome do Produto 01</h3>
+            <p class="product-price">R$00,00</p>
+            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          </div>
+        </div>
+        <div class="product-card" data-category="fivem">
+          <div class="product-img" style="--img:url('image-produto12-1.png');"></div>
+          <div class="product-info">
+            <h3 class="product-title">Nome do Produto 01</h3>
+            <p class="product-price">R$00,00</p>
+            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          </div>
+        </div>
+        <div class="product-card" data-category="streaming">
+          <div class="product-img" style="--img:url('image-produto4-1.png');"></div>
+          <div class="product-info">
+            <h3 class="product-title">Nome do Produto 01</h3>
+            <p class="product-price">R$00,00</p>
+            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="no-projects-msg hidden">
+      <i class="fa-solid fa-heart-crack"></i>
+      <p class="main-text">Nenhum produto encontrado para essa categoria.</p>
+      <p class="sub-text">Em breve estaremos atualizando com novos produtos!</p>
+    </div>
+
+    <footer class="main-footer">
+      <div class="footer-container">
+        <!-- Conteúdo principal do footer -->
+        <div class="footer-content">
+          <!-- Lado esquerdo -->
+          <div class="footer-left">
+            <img src="navbar-studio19-logo.png" alt="Logo Studio19" class="footer-logo" />
+            <p class="footer-phrase">Do branding ao design digital, transformamos ideias em soluções criativas que
+              fortalecem sua marca.</p>
+            <div class="footer-socials">
+              <a href="#" class="social-icon"><img src="Instagram.png" alt="Instagram"></a>
+              <a href="#" class="social-icon"><img src="TwitterX.png" alt="Twitter"></a>
+              <a href="#" class="social-icon"><img src="behance-icon.png" alt="Behance"></a>
+              <a href="#" class="social-icon"><img src="Discord New.png" alt="Discord"></a>
+            </div>
+          </div>
+          <!-- Lado direito -->
+          <div class="footer-right">
+            <h3 class="footer-menu-title">Menu</h3>
+            <ul class="footer-menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Sobre</a></li>
+              <li><a href="#">Projetos</a></li>
+              <li><a href="#">Produtos</a></li>
+              <li><a href="#">Pacotes</a></li>
+              <li><a href="#">Serviços</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Footer inferior -->
+        <div class="footer-bottom">
+          <p>Joana Letícia - CEO / Designer Gráfica</p>
+          <p>Copyright © 2025 STUDIO19.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
 </body>
