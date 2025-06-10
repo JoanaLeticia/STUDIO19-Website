@@ -93,13 +93,13 @@ body {
   border-bottom: none;
 }
 
-.dropdown-item:hover .item-title,
-.dropdown-item:hover .item-description {
+.dropdown-item:hover .dropdown-item-title,
+.dropdown-item:hover .dropdown-item-description {
   color: #ffffff;
   transition: color 0.3s;
 }
 
-.item-title {
+.dropdown-item-title {
   font: 700 16px Inter, sans-serif;
   color: #545454;
   text-decoration: none;
@@ -107,7 +107,7 @@ body {
   margin-bottom: -2px;
 }
 
-.item-description {
+.dropdown-item-description {
   color: #545454;
   font-weight: 500;
   font-size: 12px;
