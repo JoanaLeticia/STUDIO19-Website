@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos | STUDIO19 - Graphic Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html">
+                <img src="navbar-studio19-logo.png" alt="Studio19 Logo" class="logo">
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Sobre</a>
+
+                <div class="dropdown">
+                    <a href="projects.html" class="nav-link">Projetos ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="projects.html?categoria=branding" class="dropdown-item">
+                            <strong class="item-title">Branding</strong>
+                            <span class="item-description">Identidades visuais para marcas.</span>
+                        </a>
+                        <a href="projects.html?categoria=streaming" class="dropdown-item">
+                            <strong class="item-title">Streaming</strong>
+                            <span class="item-description">Artes criadas para canais e streamers.</span>
+                        </a>
+                        <a href="projects.html?categoria=desenhos" class="dropdown-item">
+                            <strong class="item-title">Desenho</strong>
+                            <span class="item-description">Ilustrações digitais autorais e criativas.</span>
+                        </a>
+                        <a href="projects.html?categoria=fivem" class="dropdown-item">
+                            <strong class="item-title">FiveM</strong>
+                            <span class="item-description">Texturas e designs para servidores RP.</span>
+                        </a>
+                        <a href="projects.html?categoria=modelagem" class="dropdown-item">
+                            <strong class="item-title">Modelagem 3D</strong>
+                            <span class="item-description">Modelos 3D otimizados e personalizados.</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="products.html" class="nav-link">Produtos ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="products.html?categoria=streaming" class="dropdown-item">
+                            <strong class="item-title">Streaming</strong>
+                            <span class="item-description">Pacotes prontos para canais e lives.</span>
+                        </a>
+                        <a href="products.html?categoria=fivem" class="dropdown-item">
+                            <strong class="item-title">FiveM</strong>
+                            <span class="item-description">Recursos visuais para servidores RP.</span>
+                        </a>
+                        <a href="products.html?categoria=modelagem" class="dropdown-item">
+                            <strong class="item-title">Modelagem</strong>
+                            <span class="item-description">Modelos 3D prontos para uso</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="pacotes.html" class="nav-link">Pacotes</a>
+                <a href="servicos.html" class="nav-link">Serviços</a>
+            </div>
+
+            <div class="nav-icons">
+                <a href="#" class="icon"><i class="fas fa-search"></i></a>
+                <a href="#" class="icon"><i class="fas fa-user"></i></a>
+                <a href="#" class="icon"><i class="fas fa-shopping-bag"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page">
+
+        <section class="checkout-section">
+            <h2 class="checkout-title">Checkout</h2>
+
+            <div class="checkout-container">
+
+                <!-- Área de Forma de Pagamento -->
+                <div class="payment-options">
+                    <h3 class="checkout-subtitle">Forma de pagamento</h3>
+
+                    <div class="payment-methods">
+
+                        <!-- Exemplo de método -->
+                        <label class="payment-card">
+                            <label class="custom-checkbox" style="margin-top: 10px; margin-right: 10px;">
+                                <input type="checkbox" id="disponivel" />
+                                <span class="checkmark"></span>
+                            </label>
+                            <div class="payment-details">
+                                <div class="texto">
+                                    Pix<a style="font-size: 15px; font-weight: 300; color: #A7A7A7;"> - Pagamento instantâneo, 100% seguro e sem taxas.</a>
+                                </div>
+                                <img src="thumb-pix.png" alt="Pix">
+                            </div>
+                        </label>
+
+                        <label class="payment-card">
+                            <label class="custom-checkbox" style="margin-top: 10px; margin-right: 10px;">
+                                <input type="checkbox" id="disponivel" />
+                                <span class="checkmark"></span>
+                            </label>
+                            <div class="payment-details">
+                                <div class="texto">
+                                    Paypal<a style="font-size: 15px; font-weight: 300; color: #A7A7A7;"> - Use sua conta PayPal para pagar com agilidade e proteção.</a>
+                                </div>
+                                <img src="thumb-boleto.png" alt="Paypal">
+                            </div>
+                        </label>
+
+                        <label class="payment-card">
+                            <label class="custom-checkbox" style="margin-top: 10px; margin-right: 10px;">
+                                <input type="checkbox" id="disponivel" />
+                                <span class="checkmark"></span>
+                            </label>
+                            <div class="payment-details">
+                                <div class="texto">
+                                    Mercado Pago<a style="font-size: 15px; font-weight: 300; color: #A7A7A7;"> - Divida em até 12x e aproveite a segurança do Mercado Pago.</a>
+                                </div>
+                                <img src="thumb-cartao.png" alt="Mercado Pago">
+                            </div>
+                        </label>
+
+                    </div>
+                </div>
+
+                <div>
+                    <!-- Resumo da Compra -->
+                    <div class="checkout-summary">
+                        <h3>Resumo da Compra</h3>
+
+                        <div class="summary-header" style="font-weight: 600; font-size: 14px; margin-bottom: 20px;">
+                            <span>Produto</span>
+                            <span>Valor</span>
+                        </div>
+
+                        <div class="summary-product" style="margin-bottom: 0px;">
+                            <span>Pacote Streamer - Thug</span>
+                            <span>R$ 59,90</span>
+                        </div>
+
+                        <hr class="divider">
+
+                        <div class="summary-line">
+                            <span>Subtotal</span>
+                            <span>R$ 59,90</span>
+                        </div>
+
+                        <div class="summary-line" style="margin-bottom: 0;">
+                            <span>Taxa do Meio de Pagamento</span>
+                            <span>R$ 1,99</span>
+                        </div>
+                    </div>
+                    <div class="summary-total-container">
+                        <div class="summary-total-label">Valor</div>
+                        <div class="summary-final-price">R$ 61,89</div>
+                    </div>
+                    <button class="checkout-btn">Finalizar Pagamento</button>
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+        <footer class="main-footer">
+            <div class="footer-container">
+                <!-- Conteúdo principal do footer -->
+                <div class="footer-content">
+                    <!-- Lado esquerdo -->
+                    <div class="footer-left">
+                        <img src="navbar-studio19-logo.png" alt="Logo Studio19" class="footer-logo" />
+                        <p class="footer-phrase">Do branding ao design digital, transformamos ideias em soluções
+                            criativas que fortalecem sua marca.</p>
+                        <div class="footer-socials">
+                            <a href="#" class="social-icon"><img src="Instagram.png" alt="Instagram"></a>
+                            <a href="#" class="social-icon"><img src="TwitterX.png" alt="Twitter"></a>
+                            <a href="#" class="social-icon"><img src="behance-icon.png" alt="Behance"></a>
+                            <a href="#" class="social-icon"><img src="Discord New.png" alt="Discord"></a>
+                        </div>
+                    </div>
+                    <!-- Lado direito -->
+                    <div class="footer-right">
+                        <h3 class="footer-menu-title">Menu</h3>
+                        <ul class="footer-menu">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Sobre</a></li>
+                            <li><a href="#">Projetos</a></li>
+                            <li><a href="#">Produtos</a></li>
+                            <li><a href="#">Pacotes</a></li>
+                            <li><a href="#">Serviços</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Footer inferior -->
+                <div class="footer-bottom">
+                    <p>Joana Letícia - CEO / Designer Gráfica</p>
+                    <p>Copyright © 2025 STUDIO19.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>

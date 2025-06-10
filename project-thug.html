@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos | STUDIO19 - Graphic Design</title>
+    <link rel="stylesheet" href="style-project-individual.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const slides = document.querySelectorAll(".slide");
+            const thumbs = document.querySelectorAll(".thumb");
+            const next = document.querySelector(".next");
+            const prev = document.querySelector(".prev");
+            let current = 0;
+
+            function showSlide(index) {
+                slides.forEach((s, i) => {
+                s.classList.toggle("active", i === index);
+                thumbs[i].classList.toggle("active", i === index);
+                });
+                current = index;
+            }
+
+            next.addEventListener("click", () => {
+                let newIndex = (current + 1) % slides.length;
+                showSlide(newIndex);
+            });
+
+            prev.addEventListener("click", () => {
+                let newIndex = (current - 1 + slides.length) % slides.length;
+                showSlide(newIndex);
+            });
+
+            thumbs.forEach(thumb => {
+                thumb.addEventListener("click", () => {
+                let index = parseInt(thumb.dataset.index);
+                showSlide(index);
+                });
+            });
+
+            showSlide(current);
+        });
+
+    </script>
+</head>
+<body>
+    <header class="header">
+      <nav class="nav-container">
+        <a href="index.html">
+          <img src="navbar-studio19-logo.png" alt="Studio19 Logo" class="logo">
+        </a>
+
+        <div class="nav-links">
+          <a href="#about-me" class="nav-link">Sobre</a>
+
+          <div class="dropdown">
+            <a href="#" class="nav-link">Projetos ▾</a>
+            <div class="dropdown-menu">
+              <a href="projects.html?categoria=branding" class="dropdown-item">
+                <strong class="item-title">Branding</strong>
+                <span class="item-description">Identidades visuais para marcas.</span>
+              </a>
+              <a href="projects.html?categoria=streaming" class="dropdown-item">
+                <strong class="item-title">Streaming</strong>
+                <span class="item-description">Artes criadas para canais e streamers.</span>
+              </a>
+              <a href="projects.html?categoria=desenhos" class="dropdown-item">
+                <strong class="item-title">Desenho</strong>
+                <span class="item-description">Ilustrações digitais autorais e criativas.</span>
+              </a>
+              <a href="projects.html?categoria=fivem" class="dropdown-item">
+                <strong class="item-title">FiveM</strong>
+                <span class="item-description">Texturas e designs para servidores RP.</span>
+              </a>
+              <a href="projects.html?categoria=modelagem" class="dropdown-item">
+                <strong class="item-title">Modelagem 3D</strong>
+                <span class="item-description">Modelos 3D otimizados e personalizados.</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <a href="products.html" class="nav-link">Produtos ▾</a>
+            <div class="dropdown-menu">
+              <a href="products.html?categoria=streaming" class="dropdown-item">
+                <strong class="item-title">Streaming</strong>
+                <span class="item-description">Pacotes prontos para canais e lives.</span>
+              </a>
+              <a href="products.html?categoria=fivem" class="dropdown-item">
+                <strong class="item-title">FiveM</strong>
+                <span class="item-description">Recursos visuais para servidores RP.</span>
+              </a>
+              <a href="products.html?categoria=modelagem" class="dropdown-item">
+                <strong class="item-title">Modelagem</strong>
+                <span class="item-description">Modelos 3D prontos para uso</span>
+              </a>
+            </div>
+          </div>
+
+          <a href="pacotes.html" class="nav-link">Pacotes</a>
+          <a href="servicos.html" class="nav-link">Serviços</a>
+        </div>
+
+        <div class="nav-icons">
+          <a href="#" class="icon"><i class="fas fa-search"></i></a>
+          <a href="#" class="icon"><i class="fas fa-user"></i></a>
+          <a href="#" class="icon"><i class="fas fa-shopping-bag"></i></a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="page">
+
+        <div class="general-title-section">
+            <a href="index.html" class="subtitle">HOME > PROJETOS ></a>
+            <p class="title">Pacote Streamer - ThugFPS</p>
+        </div>
+        <section class="project-page">
+            <div class="project-container">
+                
+                
+                <div class="project-main">
+                <div class="slider">
+                    <div class="slide-container">
+                        <i class="fa-solid fa-angle-left prev"></i>
+                        <img src="thumb-banner.png" alt="Banner do projeto" class="slide active">
+                        <img src="stream-finalizando.png" class="slide" alt="Slide 2">
+                        <img src="stream-offline.png" class="slide" alt="Slide 3">
+                        <img src="stream-pausada.png" class="slide" alt="Slide 4">
+                        <i class="fa-solid fa-angle-right next"></i>
+                    </div>
+                    <div class="thumbnails">
+                        <img src="thumb-banner.png" class="thumb active" data-index="0" alt="Thumb 1">
+                        <img src="stream-finalizando.png" class="thumb" data-index="1" alt="Thumb 2">
+                        <img src="stream-offline.png" class="thumb" data-index="2" alt="Thumb 3">
+                        <img src="stream-pausada.png" class="thumb" data-index="3" alt="Thumb 4">
+                    </div>
+                </div>
+
+                <div class="project-description">
+                    <h2>Descrição do projeto</h2>
+                    <p>Este é um projeto de um Pacote Streamer Ouro, ele foi desenvolvido para o Thug, um streamer de GTA RP, que interpreta um policial do BOPE no Complexo.gg, mas também compartilha seu amor por outros jogos. A identidade visual utiliza as cores vermelha, preta e branca, refletindo tanto a paixão pelo Flamengo quanto o estilo urbano e imersivo do conteúdo.
+                    <br><br>
+                    Inspirado em elementos de grafite e cultura urbana, as overlays do pacote trazem uma sensação de movimento, com o Maracanã ao fundo, representando a paixão do streamer pelo futebol e seu time Flamengo, O fundo foi pensado para transmitir urgência e dinamismo, criando uma conexão visual com o conteúdo de suas streams.
+                    <br><br>
+                    Além de overlays, o pacote inclui emotes personalizados, transições animadas, stories e alertas, todos alinhados com a estética idealizada e a energia do streamer. Cada arte foi projetada para envolver o público e destacar a personalidade do streamer, mantendo a identidade visual autêntica e profissional.
+                    <br><br>
+                    Esse pacote tem o objetivo de garantir uma presença marcante para o streamer, oferecendo uma experiência visual coesa e de alta qualidade, destacando-o no cenário de jogos e ampliando a conexão com sua audiência.</p>
+                </div>
+
+                <div class="project-tags">
+                    <span class="tag">Nome da Tag</span>
+                    <span class="tag">Nome da Tag</span>
+                    <span class="tag">Nome da Tag</span>
+                </div>
+                </div>
+
+                <!-- SIDEBAR COM AUTOR E DETALHES -->
+                <aside class="project-sidebar">
+                <div class="author-card">
+                    <img src="autor-pfp.png" class="author-photo" alt="Foto da autora">
+                    <h3 class="author-name">Joana Letícia</h3>
+                    <p class="author-email">joana.designer@gmail.com</p>
+                    <p class="author-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lacinia at augue.</p>
+
+                    <p class="contato">CONTATO</p>
+                    <div class="author-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-behance"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <p><strong style="color:#fff; font-weight: 600;">Categoria</strong><br>Nome da Categoria</p>
+                    <p><strong style="color:#fff; font-weight: 600;">Data de Desenvolvimento</strong><br>Jul. 2024</p>
+                    <p><strong style="color:#fff; font-weight: 600;">Cliente</strong><br>ThugFPS</p>
+                </div>
+                </aside>
+            </div>
+            </section>
+        <footer class="main-footer">
+          <div class="footer-container">
+            <!-- Conteúdo principal do footer -->
+            <div class="footer-content">
+              <!-- Lado esquerdo -->
+              <div class="footer-left">
+                <img src="navbar-studio19-logo.png" alt="Logo Studio19" class="footer-logo" />
+                <p class="footer-phrase">Do branding ao design digital, transformamos ideias em soluções criativas que fortalecem sua marca.</p>
+                <div class="footer-socials">
+                  <a href="#" class="social-icon"><img src="Instagram.png" alt="Instagram"></a>
+                  <a href="#" class="social-icon"><img src="TwitterX.png" alt="Twitter"></a>
+                  <a href="#" class="social-icon"><img src="behance-icon.png" alt="Behance"></a>
+                  <a href="#" class="social-icon"><img src="Discord New.png" alt="Discord"></a>
+                </div>
+              </div>
+              <!-- Lado direito -->
+              <div class="footer-right">
+                <h3 class="footer-menu-title">Menu</h3>
+                <ul class="footer-menu">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Sobre</a></li>
+                  <li><a href="#">Projetos</a></li>
+                  <li><a href="#">Produtos</a></li>
+                  <li><a href="#">Pacotes</a></li>
+                  <li><a href="#">Serviços</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Footer inferior -->
+            <div class="footer-bottom">
+              <p>Joana Letícia - CEO / Designer Gráfica</p>
+              <p>Copyright © 2025 STUDIO19.</p>
+            </div>
+          </div>
+        </footer>
+    </div>
+</body>

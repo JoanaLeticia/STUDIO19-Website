@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos | STUDIO19 - Graphic Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".toggle-visibility").forEach(icon => {
+                icon.addEventListener("click", () => {
+                    const input = icon.previousElementSibling;
+                    if (input.type === "password") {
+                        input.type = "text";
+                        icon.classList.replace("fa-eye", "fa-eye-slash");
+                    } else {
+                        input.type = "password";
+                        icon.classList.replace("fa-eye-slash", "fa-eye");
+                    }
+                });
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html">
+                <img src="navbar-studio19-logo.png" alt="Studio19 Logo" class="logo">
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Sobre</a>
+
+                <div class="dropdown">
+                    <a href="projects.html" class="nav-link">Projetos ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="projects.html?categoria=branding" class="dropdown-item">
+                            <strong class="item-title">Branding</strong>
+                            <span class="item-description">Identidades visuais para marcas.</span>
+                        </a>
+                        <a href="projects.html?categoria=streaming" class="dropdown-item">
+                            <strong class="item-title">Streaming</strong>
+                            <span class="item-description">Artes criadas para canais e streamers.</span>
+                        </a>
+                        <a href="projects.html?categoria=desenhos" class="dropdown-item">
+                            <strong class="item-title">Desenho</strong>
+                            <span class="item-description">Ilustrações digitais autorais e criativas.</span>
+                        </a>
+                        <a href="projects.html?categoria=fivem" class="dropdown-item">
+                            <strong class="item-title">FiveM</strong>
+                            <span class="item-description">Texturas e designs para servidores RP.</span>
+                        </a>
+                        <a href="projects.html?categoria=modelagem" class="dropdown-item">
+                            <strong class="item-title">Modelagem 3D</strong>
+                            <span class="item-description">Modelos 3D otimizados e personalizados.</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="products.html" class="nav-link">Produtos ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="products.html?categoria=streaming" class="dropdown-item">
+                            <strong class="item-title">Streaming</strong>
+                            <span class="item-description">Pacotes prontos para canais e lives.</span>
+                        </a>
+                        <a href="products.html?categoria=fivem" class="dropdown-item">
+                            <strong class="item-title">FiveM</strong>
+                            <span class="item-description">Recursos visuais para servidores RP.</span>
+                        </a>
+                        <a href="products.html?categoria=modelagem" class="dropdown-item">
+                            <strong class="item-title">Modelagem</strong>
+                            <span class="item-description">Modelos 3D prontos para uso</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="pacotes.html" class="nav-link">Pacotes</a>
+                <a href="servicos.html" class="nav-link">Serviços</a>
+            </div>
+
+            <div class="nav-icons">
+                <a href="#" class="icon"><i class="fas fa-search"></i></a>
+                <a href="#" class="icon"><i class="fas fa-user"></i></a>
+                <a href="#" class="icon"><i class="fas fa-shopping-bag"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page">
+        <div class="general-title-section">
+            <a href="index.html" class="subtitle" style="text-decoration: none;">HOME > MEUS PEDIDOS ></a>
+            <p class="title">Detalhes do Pedido</p>
+        </div>
+
+        <section class="account-section" style="margin-bottom: 50px;">
+            <div class="account-container">
+
+                <!-- Menu Lateral -->
+                <nav class="nav-side">
+                    <div class="item"><a href="area-minhaconta.html"><i class="fa-solid fa-house"></i> Início</a></div>
+                    <div class="item"><a href="area-meusdados.html"><i class="fa-solid fa-user"></i> Dados</a></div>
+                    <div class="item-active"><a href="area-pedidos.html"><i class="fa-solid fa-box"></i> Pedidos</a>
+                    </div>
+                    <div class="item"><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></div>
+                </nav>
+
+                <!-- Conteúdo Principal -->
+                <div class="detalhes-main">
+
+                    <!-- Card A - Pedido com produtos -->
+                    <div class="detalhes-card pedido-info">
+                        <div class="pedido-header">
+                            <div><strong style="font-size: 18px; font-weight: 600;">Pedido #123</strong>
+                                <div style="font-weight: 300;"><strong style="font-weight: 500;">Data:</strong>
+                                    00/00/0000 00:00</div>
+                            </div>
+                            <div style="text-align: end; font-weight: 300;"><strong
+                                    style="font-weight: 500;">Status:</strong> Finalizado</div>
+                        </div>
+                        <div class="pedido-produtos">
+                            <div class="pedido-itens" style="margin-bottom: -20px;">
+                                <div class="pedido-item">
+                                    <img src="placeholder.png" alt="Thumb Produto"
+                                        style="width: 126px; height: 79px;" />
+                                    <div class="item-info">
+                                        <h4 style="font-size: 18px;">Nome do Produto</h4>
+                                        <p class="categoria" style="font-size: 13px;">Categoria</p>
+                                        <p class="preco" style="font-size: 14px;">R$ 0,00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pedido-total">
+                                <p class="total-label" style="font-size: 14px;">Total</p>
+                                <p class="total-valor" style="font-size: 16px;">R$ 0,00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card B - Cliente e Pagamento -->
+                    <div class="detalhes-inferior" style="margin-bottom: -20px;">
+                        <div class="dados-cliente" style="font-weight: 300; font-size: 15px;">
+                            <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 10px;">Dados do Cliente</h4>
+                            <p><strong style="font-weight: 600;">Nome:</strong> John Doe</p>
+                            <p><strong style="font-weight: 600;">E-mail:</strong> johndoe@email.com</p>
+                            <p><strong style="font-weight: 600;">Telefone:</strong> +55 (63)98400-0000</p>
+                        </div>
+                        <div class="dados-pagamento" style="font-weight: 300; font-size: 15px; padding-left: 70px;">
+                            <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 10px;">Dados do Pagamento</h4>
+                            <p><strong style="font-weight: 600;">Forma:</strong> Paypal</p>
+                            <p><strong style="font-weight: 600;">ID:</strong> 12943321</p>
+                            <p><strong style="font-weight: 600;">Status:</strong> Aprovado</p>
+                        </div>
+                    </div>
+
+                    <div class="detalhes-botoes">
+                        <button class="btn-download"
+                            style="width: 180px; height: 50px; font-size: 16px;">Download</button>
+                        <button class="btn-whatsapp"
+                            style="width: 250px; height: 50px; font-size: 16px; background-color: #111111; font-weight: 400;"><i
+                                class="fa-brands fa-whatsapp"></i> Suporte via Whatsapp</button>
+                    </div>
+
+                </div>
+
+                <!-- Card C - Resumo do Pedido -->
+                <div>
+                    <div class="resumo-card">
+                        <h4>Resumo do Pedido</h4>
+                        <div class="resumo-item" style="font-weight: 500;"><span>Subtotal</span><span>R$ 0,00</span></div>
+                        <div class="resumo-item"><span>Taxa de Pagamento</span><span>R$ 0,00</span></div>
+                        <div class="resumo-item"><span>Descontos</span><span>R$ 0,00</span></div>
+                        <div style="height: 1px; background-color: rgb(255, 255, 255, 0.2); margin: 20px 0px;"></div>
+                        <div class="resumo-total">
+                            <p style="font-family: Inter, sans-serif; font-size: 16px;">Valor Total</p>
+                            <h3>R$ 0,00</h3>
+                        </div>
+                    </div>
+                    <p class="danfe-link" style="margin-top: 15px; font-family: Inter, sans-serif; font-size: 14px; color: #fff">Acesso à Nota Fiscal: <a href="#">DANFE ></a></p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <footer class="main-footer">
+            <div class="footer-container">
+                <!-- Conteúdo principal do footer -->
+                <div class="footer-content">
+                    <!-- Lado esquerdo -->
+                    <div class="footer-left">
+                        <img src="navbar-studio19-logo.png" alt="Logo Studio19" class="footer-logo" />
+                        <p class="footer-phrase">Do branding ao design digital, transformamos ideias em soluções
+                            criativas que fortalecem sua marca.</p>
+                        <div class="footer-socials">
+                            <a href="#" class="social-icon"><img src="Instagram.png" alt="Instagram"></a>
+                            <a href="#" class="social-icon"><img src="TwitterX.png" alt="Twitter"></a>
+                            <a href="#" class="social-icon"><img src="behance-icon.png" alt="Behance"></a>
+                            <a href="#" class="social-icon"><img src="Discord New.png" alt="Discord"></a>
+                        </div>
+                    </div>
+                    <!-- Lado direito -->
+                    <div class="footer-right">
+                        <h3 class="footer-menu-title">Menu</h3>
+                        <ul class="footer-menu">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Sobre</a></li>
+                            <li><a href="#">Projetos</a></li>
+                            <li><a href="#">Produtos</a></li>
+                            <li><a href="#">Pacotes</a></li>
+                            <li><a href="#">Serviços</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Footer inferior -->
+                <div class="footer-bottom">
+                    <p>Joana Letícia - CEO / Designer Gráfica</p>
+                    <p>Copyright © 2025 STUDIO19.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>

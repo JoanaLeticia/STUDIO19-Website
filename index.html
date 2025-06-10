@@ -5,22 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STUDIO19 - Graphic Design</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="home-page">
-        <header class="header">
-          <nav class="nav-container">
-            <img src="navbar-studio19-logo.png" alt="Studio19 Logo" class="logo">
-            <div class="nav-links">
-              <a href="#about" class="nav-link">Sobre mim</a>
-              <a href="#projects" class="nav-link">Projetos</a>
-              <a href="#services" class="nav-link">Serviços</a>
-              <a href="#packages" class="nav-link">Pacotes</a>
+    <header class="header">
+      <nav class="nav-container">
+        <a href="#">
+          <img src="navbar-studio19-logo.png" alt="Studio19 Logo" class="logo">
+        </a>
+
+        <div class="nav-links">
+          <a href="#about-me" class="nav-link">Sobre</a>
+
+          <div class="dropdown">
+            <a href="projects.html" class="nav-link">Projetos ▾</a>
+            <div class="dropdown-menu">
+              <a href="projects.html?categoria=branding" class="dropdown-item">
+                <strong class="item-title">Branding</strong>
+                <span class="item-description">Identidades visuais para marcas.</span>
+              </a>
+              <a href="projects.html?categoria=streaming" class="dropdown-item">
+                <strong class="item-title">Streaming</strong>
+                <span class="item-description">Artes criadas para canais e streamers.</span>
+              </a>
+              <a href="projects.html?categoria=desenhos" class="dropdown-item">
+                <strong class="item-title">Desenho</strong>
+                <span class="item-description">Ilustrações digitais autorais e criativas.</span>
+              </a>
+              <a href="projects.html?categoria=fivem" class="dropdown-item">
+                <strong class="item-title">FiveM</strong>
+                <span class="item-description">Texturas e designs para servidores RP.</span>
+              </a>
+              <a href="projects.html?categoria=modelagem" class="dropdown-item">
+                <strong class="item-title">Modelagem 3D</strong>
+                <span class="item-description">Modelos 3D otimizados e personalizados.</span>
+              </a>
             </div>
-          </nav>
-          <a href="#quote" class="cta-button">Faça o seu orçamento</a>
-        </header>
-      
+          </div>
+
+          <div class="dropdown">
+            <a href="products.html" class="nav-link">Produtos ▾</a>
+            <div class="dropdown-menu">
+              <a href="#texturas" class="dropdown-item">
+                <strong class="item-title">Streaming</strong>
+                <span class="item-description">Pacotes prontos para canais e lives.</span>
+              </a>
+              <a href="#stream" class="dropdown-item">
+                <strong class="item-title">FiveM</strong>
+                <span class="item-description">Recursos visuais para servidores RP.</span>
+              </a>
+              <a href="#logos" class="dropdown-item">
+                <strong class="item-title">Modelagem</strong>
+                <span class="item-description">Modelos 3D prontos para uso</span>
+              </a>
+            </div>
+          </div>
+
+          <a href="pacotes.html" class="nav-link">Pacotes</a>
+          <a href="servicos.html" class="nav-link">Serviços</a>
+        </div>
+
+        <div class="nav-icons">
+          <a href="#" class="icon"><i class="fas fa-search"></i></a>
+          <a href="#" class="icon"><i class="fas fa-user"></i></a>
+          <a href="#" class="icon"><i class="fas fa-shopping-bag"></i></a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="page">
         <section class="hero-section">
           <p class="hero-subtitle">O seu estúdio de design gráfico</p>
           <h1 class="hero-title">
@@ -30,17 +85,17 @@
             Do branding ao design digital, transformamos ideias em<br>
             soluções criativas que fortalecem sua marca.
           </p>
-          <a href="#learn-more" class="hero-cta">Saiba mais</a>
+          <a href="#about-me" class="hero-cta">Saiba mais</a>
         </section>
 
-        <section class="about-section">
+        <section class="about-section" id="about-me">
             <div class="about-container">
                 <div class="social-links">
                     <p class="vertical-text-about">ME SIGA</p>
                     <div class="vertical-line-about"></div>
-                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c86107141f64791b6c850973f38568be7c692927f266e5a9ad7fc30275513ccc?placeholderIfAbsent=true&apiKey=807b0bf227c24e9ea8a587952d400872" class="social-icon social-icon-first" alt="Social media icon" />
-                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/b64aff441f0b66fb513dda5f59b719977046bea6fa57082b9fd1bf40c646a5ab?placeholderIfAbsent=true&apiKey=807b0bf227c24e9ea8a587952d400872" class="social-icon" alt="Social media icon" />
-                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/77366c487573a81cc8544961a3d5efbcf4836f659309644121c4801f04682dac?placeholderIfAbsent=true&apiKey=807b0bf227c24e9ea8a587952d400872" class="social-icon" alt="Social media icon" />
+                    <a href="https://instagram.com/jjoaninhaa" class="social-about-icon" target="_blank"><img src="Instagram.png" alt="Instagram"></a>
+                    <a href="https://twitter.com/" class="social-about-icon" target="_blank"><img src="TwitterX.png" alt="Twitter"></a>
+                    <a href="https://www.behance.net/joanaletica743" class="social-about-icon" target="_blank"><img src="behance-icon.png" alt="Behance"></a>
                 </div>
                 <div class="content-wrapper">
                 <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/283a9e27e7ed0400d4830fd819bb4bd0dee4d1a9801e19ca231f64466ac4c225?placeholderIfAbsent=true&apiKey=807b0bf227c24e9ea8a587952d400872" class="profile-image" alt="Profile photo of Joana Letícia" />
@@ -49,75 +104,139 @@
                     <h1 class="title-about">Sobre mim</h1>
                     <p class="role-about">Estudante de Sistemas de Informação e apaixonada pela área de Design Gráfico.</p>
                     <p class="description-about">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a tincidunt est, ut tincidunt nunc. Sed vitae fringilla massa. Curabitur blandit tortor eget justo convallis sagittis. Vestibulum ante ipsum primis in.
+                    Minha paixão por tecnologia e design começou cedo, criando artes e projetos como hobby. Em 2020, decidi unir design e desenvolvimento, cursando Sistemas de Informação (UNITINS) e Design Gráfico (UNICSUL).
                     <br /><br />
-                    Sed mollis orci eros, non aliquam ipsum sagittis ut. Sed luctus dolor et faucibus accumsan. Etiam tincidunt, metus id pellentesque hendrerit, quam est bibendum orci, id sagittis erat neque placerat sapien.
+                    O STUDIO19 nasceu em 2021 como 'Joaninha Store' e foi reformulado em 2023, ganhando nova identidade e foco profissional. Hoje, oferecemos serviços criativos e qualificados para empresas, marcas e streamers.
                     </p>
-                    <button class="resume-button" tabindex="0">Meu currículo</button>
+                    <a href="https://www.linkedin.com/in/joana-letícia-1a9859204/" target="_blank" rel="noopener noreferrer">
+                      <button class="resume-button" tabindex="0">Meu currículo</button>
+                  </a>
                 </div>
                 </div>
             </div>
         </section>
-
         
         <section class="text-section">
             <p class="subtitle">CONHEÇA NOSSOS</p>
             <p class="title">Projetos</p>
         </section>
         <section class="projects-section">
-            <div class="projects-container">
+          <i class="fa-solid fa-angle-left"></i>
+          <div class="carousel-track-wrapper">
+            
+            <div class="carousel-track">
+              <!-- Card 1 -->
               <div class="project-card">
-                <img src="thug-thumb.jpg" alt="Projeto 1" class="project-image">
-                <h3 class="project-title">Título do Projeto 1</h3>
-                <p class="project-description">Descrição do projeto. Um breve resumo do que foi realizado, destacando os principais pontos.</p>
-                <a href="#" class="project-link">
-                  Confira <span class="arrow-icon">→</span>
-                </a>
+                <div class="imagem" style="--img:url('thumb-thug.jpg');"></div>
+                <h3 class="project-title">Pacote Streamer - Thug</h3>
+                <p class="project-description">Conjunto de overlays animadas, estáticas e demais elementos para o streamer...</p>
+                <a href="#" class="project-link">Confira <span class="arrow-icon">→</span></a>
               </div>
+
+              <!-- Card 2 -->
               <div class="project-card">
-                <img src="thumb-puma.jpg" alt="Projeto 2" class="project-image">
-                <h3 class="project-title">Título do Projeto 2</h3>
-                <p class="project-description">Descrição do projeto. Um breve resumo do que foi realizado, destacando os principais pontos.</p>
-                <a href="#" class="project-link">
-                  Confira <span class="arrow-icon">→</span>
-                </a>
+                <div class="imagem" style="--img:url('thumb-puma.jpg');"></div>
+                <h3 class="project-title">Pacote Streamer - Puuma</h3>
+                <p class="project-description">Conjunto de overlays animadas, estáticas e demais elementos para o streamer...</p>
+                <a href="#" class="project-link">Confira <span class="arrow-icon">→</span></a>
               </div>
+
+              <!-- Card 3 -->
               <div class="project-card">
-                <img src="thumb-saminhoz.jpg" alt="Projeto 3" class="project-image">
-                <h3 class="project-title">Título do Projeto 3</h3>
-                <p class="project-description">Descrição do projeto. Um breve resumo do que foi realizado, destacando os principais pontos.</p>
-                <a href="#" class="project-link">
-                  Confira <span class="arrow-icon">→</span>
-                </a>
+                <div class="imagem" style="--img:url('thumb-saminhoz.jpg');"></div>
+                <h3 class="project-title">Pacote Streamer - Saminhoz</h3>
+                <p class="project-description">Conjunto de overlays animadas, estáticas e demais elementos para o streamer...</p>
+                <a href="#" class="project-link">Confira <span class="arrow-icon">→</span></a>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="project-card">
+                <div class="imagem" style="--img:url('thumb-leticia.jpg');"></div>
+                <h3 class="project-title">Pacote Streamer - Letícia</h3>
+                <p class="project-description">Conjunto de overlays animadas, estáticas e demais elementos para o streamer...</p>
+                <a href="#" class="project-link">Confira <span class="arrow-icon">→</span></a>
+              </div>
+
+              <!-- Card 5 -->
+              <div class="project-card">
+                <div class="imagem" style="--img:url('thumb-tico.jpg');"></div>
+                <h3 class="project-title">Pacote Streamer - TicoRP</h3>
+                <p class="project-description">Conjunto de overlays animadas, estáticas e demais elementos para o streamer...</p>
+                <a href="#" class="project-link">Confira <span class="arrow-icon">→</span></a>
+              </div>
+
+              <!-- Card 6 -->
+              <div class="project-card">
+                <div class="imagem" style="--img:url('thumb-marcinho.jpg');"></div>
+                <h3 class="project-title">Pacote Streamer - Marcinho</h3>
+                <p class="project-description">Conjunto de overlays animadas, estáticas e demais elementos para o streamer...</p>
+                <a href="#" class="project-link">Confira <span class="arrow-icon">→</span></a>
+              </div>
+            </div>
+            
+          </div>
+          <i class="fa-solid fa-angle-right"></i>
+        </section>
+
+        <div class="project-footer">
+          <a href="#" class="project-ver-todos">
+            <span class="cta-text">Veja todos os projetos</span>
+            <svg class="arrow-icon" width="12" height="12" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 1L7 5L2 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <section class="text-section">
+            <p class="subtitle">ADQUIRA NOSSOS</p>
+            <p class="title">Produtos</p>
+            <p class="service-subtitle">Descubra nossos produtos prontos para uso em streaming, servidores FiveM e modelagem 3D. Qualidade profissional com entrega rápida e descomplicada para seu projeto.</p>
+        </section>
+        <section class="produtos-section">
+            <div class="produtos-container">
+              <div class="produto-card">
+                <div class="imagem" style="background-image: url('thumb-zegalo.png');"></div>
+                <div class="texto">Streaming <span>&#8250;</span></div>
+              </div>
+              <div class="produto-card">
+                <div class="imagem" style="background-image: url('thumb-fivem.png');"></div>
+                <div class="texto">FiveM <span>&#8250;</span></div>
+              </div>
+
+              <div class="produto-card">
+                <div class="imagem" style="background-image: url('thumb-modelagem2.png');"></div>
+                <div class="texto">Modelagem 3D <span>&#8250;</span></div>
               </div>
             </div>
         </section>
         <a href="#" class="project-more-button" tabindex="0">
-            <span class="cta-text">Veja nossos projetos</span>
+            <span class="cta-text">Veja todos os produtos</span>
         </a>
+
 
         <section class="text-section">
             <p class="subtitle">O QUE OFERTAMOS?</p>
             <p class="title">Serviços</p>
+            <p class="service-subtitle">Oferecemos uma ampla gama de serviços de design gráfico para atender às suas necessidades criativas. Desde identidade visual para streamers e marcas a modelagem e texturas para FiveM, estamos prontos para dar vida às suas ideias.</p>
         </section>
         <section class="services-section">
             <div class="services-container">
               <div class="service-card">
                 <img src="icon-art.png" alt="Service 1" class="service-image">
-                <h3 class="service-title">Título do Serviço 1</h3>
-                <p class="service-description">Descrição do serviço 1. Um texto de no máximo duas linhas.</p>
+                <h3 class="service-title">Identidades Visuais</h3>
+                <p class="service-description">Desenvolvemos identidades visuais únicas que traduzem a essência da sua marca.</p>
                 <a href="#" class="service-link">Veja projetos <span class="arrow-icon">→</span></a>
               </div>
               <div class="service-card">
                 <img src="icon-video.png" alt="Service 2" class="service-image">
-                <h3 class="service-title">Título do Serviço 2</h3>
-                <p class="service-description">Descrição do serviço 2. Um texto de no máximo duas linhas.</p>
+                <h3 class="service-title">Overlays para Streaming</h3>
+                <p class="service-description">Criamos overlays personalizados para destacar sua live com estilo único.</p>
                 <a href="#" class="service-link">Veja projetos <span class="arrow-icon">→</span></a>
               </div>
               <div class="service-card">
                 <img src="icon-fivem.png" alt="Service 3" class="service-image">
-                <h3 class="service-title">Título do Serviço 3</h3>
-                <p class="service-description">Descrição do serviço 3. Um texto de no máximo duas linhas.</p>
+                <h3 class="service-title">Texturas para FiveM</h3>
+                <p class="service-description">Produzimos texturas de alta qualidade para personalizar veículos, roupas e mapas.</p>
                 <a href="#" class="service-link">Veja projetos <span class="arrow-icon">→</span></a>
               </div>
             </div>
@@ -133,7 +252,7 @@
             <div class="package-card">
               <h3 class="package-title">Pacote Bronze</h3>
               <p class="package-description">Ideal para quem está começando, com itens essenciais para streams.</p>
-              <p class="package-price">R$ 199,00</p>
+              <p class="package-price">R$ 99,90</p>
               <hr class="package-divider" />
               <ul class="package-benefits">
                 <li>Foto de perfil</li>
@@ -149,9 +268,9 @@
             <!-- Pacote 2 -->
             <div class="package-card best-deal">
               <div class="best-deal-label">Melhor Custo-benefício</div>
-              <h3 class="package-title">Pacote Prata</h3>
-              <p class="package-description">Perfeito para streamers em crescimento, com recursos adicionais.</p>
-              <p class="package-price">R$ 399,00</p>
+              <h3 class="package-title">Pacote Ouro</h3>
+              <p class="package-description">O mais completo, ideal para quem busca máxima qualidade.</p>
+              <p class="package-price">R$ 199,90</p>
               <hr class="package-divider" />
               <ul class="package-benefits">
                 <li>Foto de perfil</li>
@@ -169,9 +288,9 @@
             </div>
             <!-- Pacote 3 -->
             <div class="package-card">
-              <h3 class="package-title">Pacote Ouro</h3>
-              <p class="package-description">O mais completo, ideal para quem busca máxima qualidade.</p>
-              <p class="package-price">R$ 599,00</p>
+              <h3 class="package-title">Pacote Prata</h3>
+              <p class="package-description">Perfeito para streamers em crescimento, com recursos adicionais.</p>
+              <p class="package-price">R$ 159,90</p>
               <hr class="package-divider" />
               <ul class="package-benefits">
                 <li>Foto de perfil</li>
@@ -189,7 +308,7 @@
           </div>
         </section>      
         
-        <section class="contact-section">
+        <section id="quote" class="contact-section">
           <section class="text-section contact-title">
             <p class="subtitle">VAMOS FAZER UM ORÇAMENTO?</p>
             <p class="title">Entre em Contato</p>
@@ -199,12 +318,25 @@
               <!-- Formulário -->
               <div class="contact-form">
                 <h3 class="form-title">Envie uma mensagem para a gente!</h3>
-                <form>
-                  <input type="text" placeholder="Seu nome *" class="form-input" required />
-                  <input type="email" placeholder="Seu e-mail *" class="form-input" required />
-                  <input type="text" placeholder="Assunto da sua mensagem" class="form-input" />
-                  <textarea placeholder="Sua mensagem *" class="form-textarea" required></textarea>
+                <form id="contact-form" action="https://formsubmit.co/jjoana.designer@gmail.com" method="POST">
+                  <!-- Campo Nome -->
+                  <input type="text" name="name" placeholder="Seu nome *" class="form-input" required />
+                
+                  <!-- Campo E-mail -->
+                  <input type="email" name="email" placeholder="Seu e-mail *" class="form-input" required />
+                
+                  <!-- Campo Assunto -->
+                  <input type="text" name="subject" placeholder="Assunto da sua mensagem" class="form-input" />
+                
+                  <!-- Campo Mensagem -->
+                  <textarea name="message" placeholder="Sua mensagem *" class="form-textarea" required></textarea>
+                
+                  <!-- Botão Enviar -->
                   <button type="submit" class="form-button">Enviar mensagem</button>
+                
+                  <!-- Configurações adicionais -->
+                  <input type="hidden" name="_subject" value="Nova mensagem do site Studio19!">
+                  <input type="hidden" name="_captcha" value="false">
                 </form>
               </div>
               <!-- Divisória Vertical -->
@@ -261,17 +393,18 @@
                 <h3 class="footer-menu-title">Menu</h3>
                 <ul class="footer-menu">
                   <li><a href="#">Home</a></li>
-                  <li><a href="#">Sobre Mim</a></li>
+                  <li><a href="#">Sobre</a></li>
                   <li><a href="#">Projetos</a></li>
-                  <li><a href="#">Serviços</a></li>
+                  <li><a href="#">Produtos</a></li>
                   <li><a href="#">Pacotes</a></li>
+                  <li><a href="#">Serviços</a></li>
                 </ul>
               </div>
             </div>
             <!-- Footer inferior -->
             <div class="footer-bottom">
               <p>Joana Letícia - CEO / Designer Gráfica</p>
-              <p>Copyright © 2024 STUDIO19.</p>
+              <p>Copyright © 2025 STUDIO19.</p>
             </div>
           </div>
         </footer>
